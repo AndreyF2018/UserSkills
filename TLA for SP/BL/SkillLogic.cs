@@ -50,17 +50,5 @@ namespace BL
             return this.skillDao.SearchSkill(title);
         }
 
-
-        //public void AddFromFileAwards()
-        //{
-        //    this.awardDao.AddFromFileAwards();
-        //}
-
-        //public IEnumerable<Skill> Delete()
-        //{
-        //    return this.skillDao.DeleteUserSkill();
-        //}
-
-
     }
 }

@@ -15,17 +15,6 @@ namespace DAL
 
     {    
 
-
-        //public UserDao()
-        //{
-        //    this.users = new List<User>();
-        //}
-
-        //public IEnumerable<User> GetAllUsers()
-        //{
-        //    return this.users.ToList();
-        //}
-
         public string Add(User user)
         {
             using (var connection = new SqlConnection(_connectionString))
@@ -84,12 +73,6 @@ namespace DAL
                     DbType = DbType.Int32,
                     ParameterName = "@id",
                     Direction = ParameterDirection.Output
-                    /*
-                    ParameterName = "@id",
-                    Value = -1,
-                    SqlDbType = SqlDbType.Int,
-                    Direction = ParameterDirection.Output
-                    */
                 };
                 command.Parameters.Add(id);
                 command.ExecuteNonQuery();
@@ -179,35 +162,5 @@ namespace DAL
              return user;
 
          }
-
-
-
-        //public int Add(User value)
-        //{
-        //    int lastId = 0;
-        //    if (users.Any())
-        //    {
-        //        lastId = users.Max(item => item.Id).Value;
-        //    }
-
-        //    value.Id = lastId + 1;
-
-        //    users.Add(value);
-
-        //    return value.Id.Value;
-        //}
-
-        //public IEnumerable<User> Delete()
-        //{
-        //    this.users.Clear();
-        //    return this.users.ToList();
-        //}
-        //public IEnumerable<User> Sort()
-        //{
-        //    var sortedUsers = from item in users
-        //                      orderby item.FirstName
-        //                      select item;
-        //    return sortedUsers;
-        //}
     }
 }

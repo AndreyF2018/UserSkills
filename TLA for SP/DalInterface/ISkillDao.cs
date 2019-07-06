@@ -15,7 +15,6 @@ namespace DalInterface
        string AssignSkill(int _assignedUserId, int _assignedSkillId);
        string DeleteUserSkill(int _deletedUserId, int _deletedSkillId);
        IEnumerable<Skill> SearchSkill(string title);
-       //void AddFromFileAwards();
       
     }
 }

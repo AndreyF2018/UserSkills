@@ -14,14 +14,6 @@ namespace DAL
     public class SkillDao : ConnectDB, ISkillDao
     {
 
-
-        // public SkillDao()
-        //{
-        //    this.skills = new List<Skill>();
-
-        //}
-
-
         public IEnumerable<Skill> GetAllSkills()
         {
             List<Skill> skills = new List<Skill>();
@@ -151,49 +143,5 @@ namespace DAL
                 }
             }
         }
-
-        //public void AddFromFileAwards()
-        //{
-
-        //    using (StreamReader file = new StreamReader("awards.txt"))
-        //    {
-        //        List<string> titles = new List<string>();
-        //        string awardTitle = "";
-
-        //        string[] strFromFile = file.ReadToEnd().Split('\n');
-        //        string[] awardslist;
-        //        foreach (var str in strFromFile)
-        //        {
-        //            awardslist = str.Split(' ');
-        //            int id = int.Parse(awardslist[0]);
-
-        //            for (int i = 1; i < awardslist.Length; i++ )
-        //            {
-        //                awardTitle = awardTitle + " " + awardslist[i];
-        //            }
-
-        //            var currentAward = new Skill()
-        //            {
-        //                Id = id,
-        //                title = awardTitle,
-
-        //            };
-        //            Add(currentAward);
-        //            awardTitle = "";
-        //        }
-        //    }
-        //}
-
-        //public IEnumerable<Skill> GetAllSkills()
-        //{
-        //    return this.skills.Values.ToList();
-        //}
-
-        //     public IEnumerable<Skill> DeleteSkill()
-        //     {
-        //         this.skills.Clear();
-        //         return this.skills.Values.ToList();
-        //     }
-        //}
     }
 }

@@ -18,10 +18,6 @@ namespace BL
         {
             this.userDao = new UserDao();
         }
-        //public void AddFromDB()
-        //{
-        //    this.userDao.AddFromDB();
-        //}
 
         public string Add(User user)
         {
@@ -57,30 +53,5 @@ namespace BL
         {
             return this.userDao.GetUserByLogin(login);
         }
-
-        //public IEnumerable<User> Delete()
-        //{
-        //    return this.userDao.Delete();
-        //}
-        //public IEnumerable<User> Sort()
-        //{
-        //    return this.userDao.Sort();
-        //}
-
-        //public IEnumerable<User> SearchByName(string firstName)
-        //{
-        //    var users = this.userDao.GetAllUsers();
-        //    var result = new List<User>();
-
-        //    foreach (var currentUser in users)
-        //    {
-        //        if(currentUser.FirstName == firstName)
-        //        {
-        //            result.Add(currentUser);
-        //        }
-        //    }
-
-        //    return result;
-        //}
     }
 }
