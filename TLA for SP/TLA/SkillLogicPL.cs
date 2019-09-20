@@ -78,10 +78,18 @@ namespace TLA
         {
             Console.WriteLine("Введите название навыка для поиска");
             var title = Console.ReadLine();
-            foreach (var item in skillLogic.SearchSkill(title))
+            if (skillLogic.SearchSkill(title) == null)
             {
-                Console.WriteLine(item);
+                Console.WriteLine("навык не найден");
             }
+            else
+            {
+                foreach (var item in skillLogic.SearchSkill(title))
+                {                 
+                        Console.WriteLine(item);
+                }
+            }
+
         }
     }
 }

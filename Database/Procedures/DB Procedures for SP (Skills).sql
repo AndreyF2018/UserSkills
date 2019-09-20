@@ -62,7 +62,7 @@ FETCH NEXT FROM @CURSOR into @skillId, @skillTitle, @skillDescription
 while @@FETCH_STATUS = 0
 BEGIN
 if @title = @skillTitle
-begin
+begin	
 	SET @isCorrect = 1
 	Select('Навык с таким названием уже есть, используйте поиск')
 end

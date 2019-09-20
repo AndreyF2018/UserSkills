@@ -8,12 +8,12 @@ namespace DalInterface
 {
     public interface IUserDao
     {
-        IEnumerable<User> GetAllUsers();
-        string Add(User user);
-        void EditUserName(User user, string newName);
-        string EditUserPassword(User user, string newPassword);
-        int UserAuthentication(string login, string password);
-        User GetUserById(int id);
-        User GetUserByLogin(string login);
+        IEnumerable<User> GetAllUsers(); // вывод всех пользователей
+        string Add(User user); // добавление пользователя
+        void EditUserName(User user, string newName); // редактирование имени
+        string EditUserPassword(User user, string newPassword); // редактирование пароля
+        int UserAuthentication(string login, string password); // аутентификация пользователя
+        User GetUserById(int id); // вывод пользователя по его Id 
+        User GetUserByLogin(string login); // вывод пользователя по его логину 
     }
 }

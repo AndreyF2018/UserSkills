@@ -36,6 +36,10 @@ namespace TLA
                         {
                             Console.WriteLine("Неправильный логин или пароль");
                         }
+                        else
+                        {
+                            Console.WriteLine("Вы успешно авторизовались");
+                        }
                         break;
                     case "2":
                         UserLogicPL.Add();
@@ -46,14 +50,16 @@ namespace TLA
                     case "4":
                         if (authorizedId == -1)
                         {
-                            authorizedId = UserLogicPL.UserAuthentication();
+                           // authorizedId = UserLogicPL.UserAuthentication();
+                            goto case "1";
                         }
                         UserLogicPL.EditUserName(authorizedId);
                         break;
                     case "5":
                          if (authorizedId == -1)
                         {
-                            authorizedId = UserLogicPL.UserAuthentication();
+                            //authorizedId = UserLogicPL.UserAuthentication();
+                            goto case "1";
                         }
                         UserLogicPL.EditUserPassword(authorizedId);
                         break;
@@ -63,7 +69,9 @@ namespace TLA
                     case "7":
                         if (authorizedId == -1)
                         {
-                            authorizedId = UserLogicPL.UserAuthentication();
+                            //authorizedId = UserLogicPL.UserAuthentication();
+                            goto case "1";
+
                         }
                         SkillLogicPL.GetUserSkills(authorizedId);
                         break;
@@ -73,14 +81,16 @@ namespace TLA
                     case "9":
                         if (authorizedId == -1)
                         {
-                            authorizedId = UserLogicPL.UserAuthentication();
+                            //authorizedId = UserLogicPL.UserAuthentication();
+                            goto case "1";
                         }
                         SkillLogicPL.AssignSkill(authorizedId);
                         break;
                     case "10":
                         if (authorizedId == -1)
                         {
-                            authorizedId = UserLogicPL.UserAuthentication();
+                            //authorizedId = UserLogicPL.UserAuthentication();
+                            goto case "1";
                         }
                         SkillLogicPL.DeleteUserSkill(authorizedId);
                         break;
@@ -95,6 +105,7 @@ namespace TLA
                         else
                         {
                             authorizedId = -1;
+                            Console.WriteLine("Вы вышли из учётной записи");
                         }
                         break;
                     default:

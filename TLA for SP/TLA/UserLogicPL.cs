@@ -13,7 +13,7 @@ namespace TLA
     public static class UserLogicPL
     {
 
-        private static IUserLogic userLogic = new UserLogic();
+        private static IUserLogic userLogic = new UserLogic(); // ссылка на интерфейс
         
         public static void Add()
         {

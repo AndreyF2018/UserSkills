@@ -12,7 +12,7 @@ namespace BL
 {
     public class UserLogic : IUserLogic
     {
-        private IUserDao userDao;
+        private IUserDao userDao; // ссылка на интерфейс
 
         public UserLogic()
         {
